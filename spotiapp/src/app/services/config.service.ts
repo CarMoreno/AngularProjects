@@ -7,7 +7,7 @@ import { HttpHeaders } from '@angular/common/http';
 export class ConfigService {
 
   private headers: HttpHeaders;
-  private TOKEN = 'BQAo2aDs3ahDRLzAZms04-ghTcfGYT8LPuCzpEmjP0_xCYf-Fxu5GwP559pteLeZVmg_fjpL8Q5rfQy5trA';
+  private TOKEN = 'QClUS8OMu6MXxP2CgzxpmiGrLR_cS9Qs87RfoyWQOgSZFMBy_8spP713G87CQb4uTZFxbiD_9OHjEY04x8';
   constructor() {
 
   }

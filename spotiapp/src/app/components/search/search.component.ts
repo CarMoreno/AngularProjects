@@ -10,6 +10,7 @@ export class SearchComponent {
 
   public artists: any[] = [];
   public loading: boolean;
+  public error: any = null;
   constructor(private spotifyService: SpotifyService) { 
     
   }
@@ -25,8 +26,10 @@ export class SearchComponent {
           console.log(data);
           this.artists = data;
           this.loading = false;
+        }, error => {
+          this.loading = false;
+          this.error = error['error'];
         });
-      // console.log('termino :', termino);
     }
   }
 }

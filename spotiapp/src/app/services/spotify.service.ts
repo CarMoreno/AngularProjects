@@ -37,4 +37,22 @@ export class SpotifyService {
     return this.getQuery(`search?q=${ termino }&type=artist&limit=15`)
             .pipe( map(data => data['artists'].items));
   }
+
+  /**
+   * Retorna los artistas
+   * @param termino 
+   */
+  getArtist(id: string) {
+    return this.getQuery(`artists/${id}`)
+            // .pipe( map(data => data['artists'].items));
+  }
+
+  /**
+   * Retorna los artistas
+   * @param termino 
+   */
+  getTopTracks(id: string) {
+    return this.getQuery(`artists/${id}/top-tracks?country=ES`)
+            .pipe( map(data => data['tracks']));
+  }
 }
